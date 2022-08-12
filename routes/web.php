@@ -9,6 +9,7 @@ use App\Http\Controllers\storeController;
 use App\Http\Controllers\uploadController;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\memberController;
+use App\Http\Controllers\calculateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +72,8 @@ Route::get('/', function () {
 //Route::get('delete{id}',[memberController::class,'delete']);
 //Route::get('edit{id}',[memberController::class,'showData']);
 //Route::post('edit',[memberController::class,'update']);
-Route::get("list",[memberController::class,'operations']);
+//Route::get("list",[memberController::class,'operations']);
+Route::get('list',[calculateController::class,'operation']);
 
 
 
