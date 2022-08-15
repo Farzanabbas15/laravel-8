@@ -10,6 +10,10 @@ use App\Http\Controllers\uploadController;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\memberController;
 use App\Http\Controllers\calculateController;
+use App\Http\Controllers\joinController;
+use App\Http\Controllers\accessController;
+use App\Http\Controllers\mutatorController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -73,7 +77,10 @@ Route::get('/', function () {
 //Route::get('edit{id}',[memberController::class,'showData']);
 //Route::post('edit',[memberController::class,'update']);
 //Route::get("list",[memberController::class,'operations']);
-Route::get('list',[calculateController::class,'operation']);
+//Route::get('list',[calculateController::class,'operation']);
+//Route::get('list',[joinController::class,'joins']);
+//Route::get('list',[accessController::class,'aces']);
+Route::get('list',[mutatorController::class,'index']);
 
 
 
