@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Member extends Model
+class device extends Model
 {
-    
     use HasFactory;
-
-    function employeeData()
-    {
-        return $this->hasOne('App\Models\employee');
-    }
+    public $timestamp=false;
+}
+function getDevice(){
+    return $this->hasMany('App\Models\device');
 }

@@ -16,5 +16,16 @@ class employee extends Model
     {
         return $value."email.com";
     }
+
+
+
+
+
+
+
     
+    //one to many relation
+    function getDevice(){
+        return $this->hasMany('App\Models\device');
+    }
 }

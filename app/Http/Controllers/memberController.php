@@ -59,4 +59,8 @@ class memberController extends Controller
         
     }
     
+    function oto()
+    {
+        return Member::find(1)->employeeData;
+    }
 }

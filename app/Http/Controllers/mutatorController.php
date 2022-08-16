@@ -9,10 +9,13 @@ use Illuminate\Http\Request;
 class mutatorController extends Controller
 {
     //
-    function index(){
+    function index()
+    {
         $data = new data;
         $data->name="saboor";
         $data->email="saboor@gmail.com";
+        $data->address="karachi";
+
         $data->save();
     }
 }
