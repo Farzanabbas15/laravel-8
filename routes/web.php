@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userAuth;
 use App\Http\Controllers\htmlController;
@@ -12,7 +14,9 @@ use App\Http\Controllers\memberController;
 use App\Http\Controllers\calculateController;
 use App\Http\Controllers\joinController;
 use App\Http\Controllers\accessController;
+use App\Http\Controllers\memController;
 use App\Http\Controllers\mutatorController;
+
 
 
 /*
@@ -25,6 +29,16 @@ use App\Http\Controllers\mutatorController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+$info ="this is the example of fluent strings";
+//$info=Str::ucfirst($info);
+//$info=Str::replaceFirst("This","Hi",$info);
+//$info=Str::camel($info);
+$info=Str::of($info)
+  ->ucfirst($info)
+  ->replaceFirst("This","Hi",$info)
+  ->camel($info);
+echo $info;
 
 Route::get('/', function () {
 
@@ -80,7 +94,8 @@ Route::get('/', function () {
 //Route::get('list',[calculateController::class,'operation']);
 //Route::get('list',[joinController::class,'joins']);
 //Route::get('list',[accessController::class,'aces']);
-Route::get('list',[mutatorController::class,'index']);
+//Route::get('member',[mutatorController::class,'index']);
+//Route::get('show',[memController::class,'dev']);
 
 
 
