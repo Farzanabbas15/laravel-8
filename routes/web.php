@@ -16,6 +16,8 @@ use App\Http\Controllers\joinController;
 use App\Http\Controllers\accessController;
 use App\Http\Controllers\memController;
 use App\Http\Controllers\mutatorController;
+use App\Http\Controllers\deviceController;
+use App\Mail\sampleMail;
 
 
 
@@ -30,19 +32,20 @@ use App\Http\Controllers\mutatorController;
 |
 */
 
-$info ="this is the example of fluent strings";
+//$info ="this is the example of fluent strings";
 //$info=Str::ucfirst($info);
 //$info=Str::replaceFirst("This","Hi",$info);
 //$info=Str::camel($info);
-$info=Str::of($info)
-  ->ucfirst($info)
-  ->replaceFirst("This","Hi",$info)
-  ->camel($info);
-echo $info;
+//$info=Str::of($info)
+//  ->ucfirst($info)
+//  ->replaceFirst("This","Hi",$info)
+//  ->camel($info);
+//echo $info;
 
 Route::get('/', function () {
 
-    return view('welcome');
+    //return view('welcome');
+    return new sampleMail();
 });
 //Route::get('/prof/{lang}', function ($lang) {
 //  App::setlocale($lang);
@@ -96,6 +99,11 @@ Route::get('/', function () {
 //Route::get('list',[accessController::class,'aces']);
 //Route::get('member',[mutatorController::class,'index']);
 //Route::get('show',[memController::class,'dev']);
+//Route::get('device/{key:device}',[deviceController::class,'index']);
+
+
+
+
 
 
 
@@ -123,3 +131,8 @@ Route::get('/', function () {
 //@for($i=1;$i<11;$i++)
 //<h4>{{$i}}</h4>
 //@endfor
+
+//example of one to many relation
+//function getDevice(){
+//  return $this->hasMany('App\Models\device');
+//}

@@ -10,6 +10,3 @@ class device extends Model
     use HasFactory;
     public $timestamp=false;
 }
-function getDevice(){
-    return $this->hasMany('App\Models\device');
-}
