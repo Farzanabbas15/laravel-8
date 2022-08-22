@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\device;
+use Validator;
 
 class fourthapiController extends Controller
 {
@@ -39,5 +40,32 @@ class fourthapiController extends Controller
     function searchData($device)
     {
         return device::where("device","like","%".$device."%")->get();
+    }
+
+    function testData(Request $req)
+    {
+        $rules=array(
+            "employee_id"=>"required"
+        );
+        $validator = Validator::make($req->all(),$rules());
+        if($validator->fails())
+        {
+            return $validator->errors();
+        }
+        else 
+        {
+            $device= new device;
+            $device->device=$req->device;
+            $device->employee_id=$req->employee_id;
+            $result=$device->save();  
+            if($result)
+         {
+            return ["Result"=>"Data has been updated"];
+         }
+         else{
+            return["Result"=>"Operation Failed"];
+         } 
+        }
+
     }
 }
