@@ -8,6 +8,7 @@ use App\Http\Controllers\thirdapiController;
 use App\Http\Controllers\fourthapiController;
 use App\Http\Controllers\fifthController;
 use App\Http\Controllers\santumController;
+use App\Http\Controllers\fileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,4 @@ Route::post("validate",[fourthapiController::class,'testData']);
 Route::apiResource("resource",fifthController::class);
 });
 Route::post("login",[santumController::class,'index']);
+Route::post("upload",[fileController::class,'upload']);

@@ -17,6 +17,8 @@ use App\Http\Controllers\accessController;
 use App\Http\Controllers\memController;
 use App\Http\Controllers\mutatorController;
 use App\Http\Controllers\deviceController;
+use App\Http\Controllers\studentController;
+
 use App\Mail\sampleMail;
 
 
@@ -100,7 +102,7 @@ Route::get('/', function () {
 //Route::get('member',[mutatorController::class,'index']);
 //Route::get('show',[memController::class,'dev']);
 //Route::get('device/{key:device}',[deviceController::class,'index']);
-
+Route::get('list',[studentController::class,'list']);
 
 
 
