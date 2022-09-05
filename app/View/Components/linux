@@ -1,0 +1,31 @@
+Commands for linux
+
+Ls == list files
+Ls -R== list every content in every directory
+Ls -a == also isted hidden files
+Ls -f == list the total files with access permission
+mv==move file command
+cp==copy file command
+pwd==show directory command
+mkdir== make directory
+Touch == command to make file
+Touch . ==command starts with (.) it make hidden file
+
+Sudo -> super user
+Sudo apt-get update == to update only list of softwares
+Sudo apt upgrade == to update software  
+
+Lart == L - LONG LIST FORMAT
+a - LIST ALL FILES INCLUDING FILES STARTING WITH "."
+r - SORT IN REVERSE ORDER
+t - SORT ACCORDING TO MODIFICATION TIME
+
+Chmod calculator -> to give access permission to owner,group and public
+chmod  (calculator numbers) then (file name)== to change permission
+
+Top == tell us the consuming resource
+Ps == list all processors
+Ps -a == also display background processors
+
+Kill (PID) == to close any program (and you can see PID from top command ) 
+Apt install == this command is to install anything

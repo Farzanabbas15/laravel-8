@@ -11,7 +11,7 @@ class sendmailController extends Controller
     //
     function sendEmail()
     {
-        $emailJob = (new sendEmailJob())->delay(Carbon::now()->addSeconds(5));
+        $emailJob = (new sendEmailJob())->delay(Carbon::now());
         dispatch($emailJob);
 
         dd('email sent');
